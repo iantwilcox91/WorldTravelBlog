@@ -1,10 +1,11 @@
 ﻿@model Travel_Blog.Models.Location
 
-<html>
-<head>
-    <title>Blog - Create</title>
-</head>
-<body>
+@{
+    ViewData["Title"] = "World Travel Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
     <h2>Create</h2>
     <hr />
     <h4>Add a new location</h4>
@@ -16,5 +17,3 @@
         <input type="submit" value="Add new location" />
     }
     <p>@Html.ActionLink("Back to list", "Index")</p>
-</body>
-</html>

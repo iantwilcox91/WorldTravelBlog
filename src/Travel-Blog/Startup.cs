@@ -35,6 +35,7 @@ namespace WorldTravelBlog
         public void Configure(IApplicationBuilder app)
         {
             //2
+            app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

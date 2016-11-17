@@ -1,10 +1,11 @@
 ﻿@model Travel_Blog.Models.Location
 
-<html>
-<head>
-    <title> EDIT </title>
-</head>
-<body>
+@{
+    ViewData["Title"] = "World Travel Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
     <h2>Edit</h2>
     <hr /> 
     <h4>Edit this task: @Html.DisplayFor(Model => Model.Name)</h4>
@@ -19,6 +20,3 @@
     }
 
     <p>@Html.ActionLink("Back to list", "Index")</p>
-
-</body>
-</html>
