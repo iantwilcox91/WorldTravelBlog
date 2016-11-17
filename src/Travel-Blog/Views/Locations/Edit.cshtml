@@ -1,0 +1,24 @@
+﻿@model Travel_Blog.Models.Location
+
+<html>
+<head>
+    <title> EDIT </title>
+</head>
+<body>
+    <h2>Edit</h2>
+    <hr /> 
+    <h4>Edit this task: @Html.DisplayFor(Model => Model.Name)</h4>
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.LocationId)
+
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
+
+        <input type="submit" value="Save" />
+    }
+
+    <p>@Html.ActionLink("Back to list", "Index")</p>
+
+</body>
+</html>
