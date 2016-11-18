@@ -25,7 +25,7 @@ namespace WorldTravelBlog
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+           
 
             services.AddEntityFramework()
                 .AddDbContext<WorldTravelBlogContext>(options =>
@@ -36,12 +36,8 @@ namespace WorldTravelBlog
         {
             //2
             app.UseStaticFiles();
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            
+           
 
 
             app.Run(async (context) =>

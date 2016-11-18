@@ -8,11 +8,22 @@ namespace Travel_Blog.Models
 {
     public class WorldTravelBlogContext : DbContext
     {
-        public virtual DbSet<Location> Locations { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        public DbSet<Location> Locations { get; set; }
+
+        public DbSet<Experience> Experiences { get; set; }
+        public WorldTravelBlogContext(DbContextOptions<WorldTravelBlogContext> options)
+            : base(options)
         {
-            options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=WorldTravelBlog;integrated security=True");
+        }
+
+        public WorldTravelBlogContext()
+        {
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
         }
     }
 }
